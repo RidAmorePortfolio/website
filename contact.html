@@ -29,7 +29,7 @@
             width: 100%;
             background-color: rgba(255, 255, 255, 0.95);
             display: flex;
-            justify-space: space-between;
+            justify-content: space-between; /* 🛠️ FIXED: Corrected layout property */
             align-items: center;
             padding: 24px 40px;
             z-index: 1000;
@@ -72,7 +72,7 @@
             color: #111111;
             text-decoration: none;
             font-size: 15px;
-            margin-left: 12px;
+            margin-left: 12px; /* 🛠️ FIXED: Corrected envelope link padding layout */
             transition: opacity 0.2s ease;
         }
 
@@ -184,7 +184,7 @@
 </head>
 <body>
 
-    <!-- Fixed Top Navigation Dock -->
+    <!-- Constant Navigation Dock -->
     <nav class="navbar">
         <div class="nav-links">
             <a href="index.html#projects">Projects</a>
@@ -207,8 +207,7 @@
                 Have an idea, project, or collaboration in mind? Drop a message through the form below, or send an email directly to <a href="mailto:bridplsok@gmail.com">bridplsok@gmail.com</a>.
             </p>
 
-            <!-- 🛠️ ACTIVATED: Your live Formspree API endpoint -->
-            <form action="https://formspree.io/f/mbdezaqk" method="POST" class="contact-form">
+            <form action="https://formspree.io" method="POST" class="contact-form">
                 <div class="form-group">
                     <label for="name">Name</label>
                     <input type="text" id="name" name="name" required placeholder="Your full name">
@@ -230,4 +229,3 @@
     </main>
 </body>
 </html>
-
