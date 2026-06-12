@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Ridwan Amore</title>
+    <style>
+        /* Base Layout & Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            background-color: #ffffff;
+            color: #333333;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Fixed Top Navigation Dock */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.95);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 24px 40px;
+            z-index: 1000;
+            border-bottom: 1px solid #f2f2f2;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #111111;
+            font-weight: 400;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            transition: opacity 0.2s ease;
+        }
+
+        .nav-links a:hover {
+            opacity: 0.5;
+        }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .signature {
+            font-weight: 300;
+            font-size: 20px;
+            letter-spacing: -0.3px;
+            color: #111111;
+        }
+
+        .social-icons a {
+            color: #111111;
+            text-decoration: none;
+            font-size: 15px;
+            margin-left: 12px;
+            transition: opacity 0.2s ease;
+        }
+
+        .social-icons a:hover {
+            opacity: 0.5;
+        }
+
+        main {
+            margin-top: 140px;
+        }
+
+        .contact-container {
+            max-width: 600px;
+            margin: 0 auto 100px auto;
+            padding: 0 40px;
+        }
+
+        .contact-container h1 {
+            font-size: 36px;
+            font-weight: 300;
+            letter-spacing: -0.5px;
+            margin-bottom: 16px;
+            color: #111111;
+        }
+
+        .contact-intro {
+            font-size: 15px;
+            color: #666666;
+            line-height: 1.6;
+            margin-bottom: 40px;
+        }
+
+        .contact-intro a {
+            color: #111111;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            transition: opacity 0.2s ease;
+        }
+
+        .contact-intro a:hover {
+            opacity: 0.6;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 28px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .form-group label {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: #222222;
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            font-size: 15px;
+            padding: 12px 0;
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid #cccccc;
+            color: #111111;
+            outline: none;
+            border-radius: 0;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-bottom: 1px solid #111111;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .submit-btn {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            align-self: flex-start;
+            background-color: #111111;
+            color: #ffffff;
+            border: none;
+            padding: 14px 36px;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-weight: 400;
+            cursor: pointer;
+            border-radius: 4px;
+            margin-top: 10px;
+            transition: opacity 0.2s ease;
+        }
+
+        .submit-btn:hover {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Fixed Top Navigation Dock -->
+    <nav class="navbar">
+        <div class="nav-links">
+            <a href="index.html#projects">Projects</a>
+            <a href="work.html">Work</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <div class="nav-right">
+            <span class="signature">Ridwan Amore</span>
+            <div class="social-icons">
+                <a href="contact.html">✉</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="contact-container">
+            <h1>Get In Touch</h1>
+            <p class="contact-intro">
+                Have an idea, project, or collaboration in mind? Drop a message through the form below, or send an email directly to <a href="mailto:bridplsok@gmail.com">bridplsok@gmail.com</a>.
+            </p>
+
+            <form action="https://formspree.io" method="POST" class="contact-form">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required placeholder="Your full name">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required placeholder="name@example.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" required placeholder="Tell me about your project..."></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </section>
+    </main>
+</body>
+</html>

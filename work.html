@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work | Ridwan Amore</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Base Layout & Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            background-color: #ffffff;
+            color: #333333;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Fixed Top Navigation Dock */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.95);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 24px 40px;
+            z-index: 1000;
+            border-bottom: 1px solid #f2f2f2;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #111111;
+            font-weight: 400;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            transition: opacity 0.2s ease;
+        }
+
+        .nav-links a:hover {
+            opacity: 0.5;
+        }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .signature {
+            font-weight: 300;
+            font-size: 20px;
+            letter-spacing: -0.3px;
+            color: #111111;
+        }
+
+        .social-icons a {
+            color: #111111;
+            text-decoration: none;
+            font-size: 15px;
+            margin-left: 12px;
+            transition: opacity 0.2s ease;
+        }
+
+        .social-icons a:hover {
+            opacity: 0.5;
+        }
+
+        main {
+            margin-top: 140px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto 120px auto;
+            padding: 0 40px;
+        }
+
+        .container h1 {
+            font-size: 36px;
+            font-weight: 300;
+            letter-spacing: -0.5px;
+            margin-bottom: 24px;
+            color: #111111;
+        }
+
+        .container p {
+            font-size: 16px;
+            color: #666666;
+            line-height: 1.75;
+            margin-bottom: 40px;
+        }
+
+        .cv-section {
+            margin-top: 40px;
+        }
+
+        .cv-section h2 {
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #111111;
+            font-weight: 500;
+            border-bottom: 1px solid #f0f0f0;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .cv-item {
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            margin-bottom: 24px;
+            gap: 20px;
+        }
+
+        .cv-meta {
+            font-size: 14px;
+            color: #999999;
+            font-weight: 400;
+        }
+
+        .cv-detail h3 {
+            font-size: 16px;
+            font-weight: 400;
+            color: #111111;
+            margin-bottom: 4px;
+        }
+
+        .cv-detail h4 {
+            font-size: 14px;
+            font-weight: 400;
+            color: #666666;
+            margin-bottom: 8px;
+        }
+
+        .cv-detail ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .cv-detail li {
+            font-size: 14px;
+            color: #666666;
+            margin-bottom: 6px;
+            position: relative;
+            padding-left: 15px;
+        }
+
+        .cv-detail li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #b5b5b5;
+        }
+
+        @media (max-width: 600px) {
+            .cv-item {
+                grid-template-columns: 1fr;
+                gap: 6px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Fixed Top Navigation Dock -->
+    <nav class="navbar">
+        <div class="nav-links">
+            <a href="index.html#projects">Projects</a>
+            <a href="work.html">Work</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <div class="nav-right">
+            <span class="signature">Ridwan Amore</span>
+            <div class="social-icons">
+                <a href="contact.html">✉</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container">
+            <h1>Work</h1>
+            <p>A selection of client engagements, professional positions, and background history.</p>
+
+            <section class="cv-section">
+                <h2>Experience History</h2>
+
+                <div class="cv-item">
+                    <div class="cv-meta">May 2026 – Present</div>
+                    <div class="cv-detail">
+                        <h3>Commercial Operations Staff</h3>
+                        <h4>The Sugarhouse — Lancaster University</h4>
+                        <ul>
+                            <li>Deliver customer-focused service and maintain strict operational safety workflows.</li>
+                            <li>Collaborate inside fast-paced teams to resolve query requirements cleanly.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="cv-item">
+                    <div class="cv-meta">August 2025 – Present</div>
+                    <div class="cv-detail">
+                        <h3>Traffic Steward</h3>
+                        <h4>EP Team</h4>
+                        <ul>
+                            <li>Support public safety, traffic management, and crowd control at large-scale events.</li>
+                            <li>Communicate clearly and professionally in high-pressure environments.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="cv-item">
+                    <div class="cv-meta">February 2023 – April 2025</div>
+                    <div class="cv-detail">
+                        <h3>Steward</h3>
+                        <h4>Bet365</h4>
+                        <ul>
+                            <li>Delivered customer-focused service while maintaining safety and compliance standards.</li>
+                            <li>Resolved queries efficiently and worked collaboratively within fast-paced teams.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+</body>
+</html>

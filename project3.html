@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Detail | Ridwan Amore</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .project-header { max-width: 900px; margin: 120px auto 50px auto; padding: 0 40px; }
+        .project-header h2 { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 36px; font-weight: 300; letter-spacing: -0.5px; margin-bottom: 18px; color: #111111; }
+        .project-header p { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 15px; color: #666666; max-width: 720px; line-height: 1.7; }
+        .project-gallery { max-width: 900px; margin: 0 auto; padding: 0 40px; }
+        .gallery-block { margin-bottom: 70px; }
+        .gallery-block img { width: 100%; height: auto; border-radius: 4px; cursor: zoom-in; transition: opacity 0.25s ease; }
+        .gallery-block img:hover { opacity: 0.92; }
+        .recommendation-footer { border-top: 1px solid #f0f0f0; padding: 70px 40px; text-align: center; background-color: #fafafa; margin-top: 120px; }
+        .recommendation-footer span { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase; letter-spacing: 2px; color: #999999; display: block; margin-bottom: 12px; font-weight: 400; }
+        .recommendation-footer a { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 24px; font-weight: 300; color: #111111; text-decoration: none; display: inline-block; transition: opacity 0.2s ease; }
+        .recommendation-footer a:hover { opacity: 0.5; }
+        .lightbox { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.95); display: flex; justify-content: center; align-items: center; z-index: 2000; opacity: 0; pointer-events: none; transition: opacity 0.3s ease; }
+        .lightbox.active { opacity: 1; pointer-events: auto; }
+        .lightbox img { max-width: 92%; max-height: 92%; object-fit: contain; transform: scale(0.95); transition: transform 0.3s ease; }
+        .lightbox.active img { transform: scale(1); }
+        .lightbox-close { position: absolute; top: 30px; right: 40px; color: #ffffff; font-size: 40px; cursor: pointer; font-weight: 200; }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-links">
+            <a href="index.html#projects">Projects</a>
+            <a href="work.html">Work</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <div class="nav-right">
+            <span class="signature">Ridwan Amore</span>
+            <div class="social-icons"><a href="contact.html">✉</a></div>
+        </div>
+    </nav>
+    <main>
+        <header class="project-header">
+            <h2>AR design interaction: Bird watching</h2>
+            <p>Designing how users may interact with a bird watching AR software. You can also <a href="./assets/birdwatching.pdf" target="_blank" style="color: #111111; font-weight: 500; text-decoration: underline; text-underline-offset: 3px; transition: opacity 0.2s ease;" onmouseover="this.style.opacity='0.6'" onmouseout="this.style.opacity='1'">download the complete project PDF here</a>.</p>
+        </header>
+        <section class="project-gallery">
+            <div class="gallery-block"><img src="frontpage.png" alt="1" class="zoomable"></div>
+            <div class="gallery-block"><img src="book.png" alt="2" class="zoomable"></div>
+            <div class="gallery-block"><img src="drawingss.png" alt="3" class="zoomable"></div>
+            <div class="gallery-block"><img src="drawings2.png" alt="4" class="zoomable"></div>
+            <div class="gallery-block"><img src="graphh.png" alt="5" class="zoomable"></div>
+            <div class="gallery-block"><img src="prototypepapeer.png" alt="6" class="zoomable"></div>
+            <div class="gallery-block"><img src="prototype2.png" alt="7" class="zoomable"></div>
+            <div class="gallery-block"><img src="prototype2.png" alt="8" class="zoomable"></div>
+            <div class="gallery-block"><img src="controls.png" alt="9" class="zoomable"></div>
+            <div class="gallery-block"><img src="controls2.png" alt="10" class="zoomable"></div>
+        </section>
+        <footer class="recommendation-footer"><span>You May Also Like</span><a href="project4.html">Re-imagining Abandoned Buildings &rarr;</a></footer>
+    </main>
+    <div class="lightbox" id="lightbox"><span class="lightbox-close" id="lightbox-close">&times;</span><img id="lightbox-img" src="" alt="Enlarged"></div>
+    <script>
+        const lightbox = document.getElementById('lightbox'); const lightboxImg = document.getElementById('lightbox-img'); const lightboxClose = document.getElementById('lightbox-close');
+        document.querySelectorAll('.zoomable').forEach(img => { img.addEventListener('click', () => { lightboxImg.src = img.src; lightbox.classList.add('active'); }); });
+        lightboxClose.addEventListener('click', () => { lightbox.classList.remove('active'); });
+        lightbox.addEventListener('click', (e) => { if (e.target !== lightboxImg && e.target !== lightboxClose) { lightbox.classList.remove('active'); } });
+    </script>
+</body>
+</html>
+

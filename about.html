@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Ridwan Amore</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Base Layout Settings */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            background-color: #ffffff;
+            color: #333333;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* About Header Section */
+        .about-header {
+            max-width: 800px;
+            margin: 140px auto 60px auto;
+            padding: 0 40px;
+        }
+
+        .about-header h1 {
+            font-size: 24px;
+            font-weight: 400;
+            letter-spacing: -0.3px;
+            margin-bottom: 16px;
+            color: #111111;
+        }
+
+        .about-header p {
+            font-size: 15px;
+            color: #555555;
+            line-height: 1.7;
+        }
+
+        /* About Narrative & Image Layout */
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto 120px auto;
+            padding: 0 40px;
+        }
+
+        .about-image {
+            width: 100%;
+            height: auto;
+            border-radius: 4px;
+            margin: 30px 0 40px 0;
+            cursor: zoom-in;
+            transition: opacity 0.25s ease;
+        }
+
+        .about-image:hover {
+            opacity: 0.95;
+        }
+
+        /* CV & Work Experience Layout Grid */
+        .cv-section {
+            margin-top: 50px;
+        }
+
+        .cv-section h2 {
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #111111;
+            font-weight: 500;
+            border-bottom: 1px solid #f0f0f0;
+            padding-bottom: 10px;
+            margin-bottom: 24px;
+        }
+
+        .cv-item {
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            margin-bottom: 30px;
+            gap: 20px;
+        }
+
+        .cv-meta {
+            font-size: 14px;
+            color: #999999;
+            font-weight: 400;
+        }
+
+        .cv-detail h3 {
+            font-size: 16px;
+            font-weight: 400;
+            color: #111111;
+            margin-bottom: 4px;
+        }
+
+        .cv-detail h4 {
+            font-size: 14px;
+            font-weight: 400;
+            color: #666666;
+            margin-bottom: 10px;
+        }
+
+        .cv-detail ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .cv-detail li {
+            font-size: 14px;
+            color: #666666;
+            margin-bottom: 6px;
+            position: relative;
+            padding-left: 15px;
+        }
+
+        .cv-detail li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #b5b5b5;
+        }
+
+        @media (max-width: 600px) {
+            .cv-item {
+                grid-template-columns: 1fr;
+                gap: 6px;
+            }
+        }
+
+        /* Lightbox Layout Styles */
+        .lightbox {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.95);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 2000;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+
+        .lightbox.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .lightbox img {
+            max-width: 92%;
+            max-height: 92%;
+            object-fit: contain;
+            transform: scale(0.95);
+            transition: transform 0.3s ease;
+        }
+
+        .lightbox.active img {
+            transform: scale(1);
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 30px;
+            right: 40px;
+            color: #ffffff;
+            font-size: 40px;
+            cursor: pointer;
+            font-weight: 200;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Fixed Top Navigation Dock -->
+    <nav class="navbar">
+        <div class="nav-links">
+            <a href="index.html#projects">Projects</a>
+            <a href="work.html">Work</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <div class="nav-right">
+            <span class="signature">Ridwan Amore</span>
+            <div class="social-icons">
+                <a href="contact.html">✉</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <header class="about-header">
+            <h1>Profile</h1>
+            <p>I'm a Design student at Lancaster University with a deep passion for both design and technology. I am driven by the desire to shape the future, create meaningful change, and push the boundaries of innovation. Alongside my academic focus, I nurture a creative side rooted in entertainment, exploring new ways to engage and inspire.</p>
+        </header>
+
+        <article class="about-content">
+            <img src="IMG_1082.jpg" alt="Studio Workspace" class="about-image zoomable">
+
+            <section class="cv-section">
+                <h2>Work Experience</h2>
+
+                <div class="cv-item">
+                    <div class="cv-meta">May 2026 – Present</div>
+                    <div class="cv-detail">
+                        <h3>Commercial Operations Staff</h3>
+                        <h4>The Sugarhouse — Lancaster University</h4>
+                        <ul>
+                            <li>Deliver customer-focused service and maintain strict operational safety workflows.</li>
+                            <li>Collaborate inside fast-paced teams to resolve query requirements cleanly.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="cv-item">
+                    <div class="cv-meta">August 2025 – Present</div>
+                    <div class="cv-detail">
+                        <h3>Traffic Steward</h3>
+                        <h4>EP Team</h4>
+                        <ul>
+                            <li>Support public safety, traffic management, and crowd control at large-scale events.</li>
+                            <li>Communicate clearly and professionally in high-pressure environments.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="cv-item">
+                    <div class="cv-meta">February 2023 – April 2025</div>
+                    <div class="cv-detail">
+                        <h3>Steward</h3>
+                        <h4>Bet365</h4>
+                        <ul>
+                            <li>Delivered customer-focused service while maintaining safety and compliance standards.</li>
+                            <li>Resolved queries efficiently and worked collaboratively within fast-paced teams.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </article>
+    </main>
+
+    <div class="lightbox" id="lightbox">
+        <span class="lightbox-close" id="lightbox-close">&times;</span>
+        <img id="lightbox-img" src="" alt="Enlarged view">
+    </div>
+
+    <script>
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const lightboxClose = document.getElementById('lightbox-close');
+
+        document.querySelectorAll('.zoomable').forEach(img => {
+            img.addEventListener('click', () => {
+                lightboxImg.src = img.src;
+                lightbox.classList.add('active');
+            });
+        });
+
+        lightboxClose.addEventListener('click', () => {
+            lightbox.classList.remove('active');
+        });
+
+        lightbox.addEventListener('click', (e) => {
+            if (e.target !== lightboxImg && e.target !== lightboxClose) {
+                lightbox.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>
