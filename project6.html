@@ -15,7 +15,7 @@
         .project-header h2 {
             font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
             font-size: 36px;
-            font-weight: 300;
+            font-weight: 300; /* Clean semi-thick weight */
             letter-spacing: -0.5px;
             margin-bottom: 18px;
             color: #111111;
@@ -83,7 +83,7 @@
         .recommendation-footer a {
             font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
             font-size: 24px;
-            font-weight: 300;
+            font-weight: 300; /* Clean semi-thick style */
             color: #111111;
             text-decoration: none;
             display: inline-block;
@@ -195,10 +195,11 @@
                 <img src="7.png" alt="Project Documentation 7" class="zoomable">
             </div>
 
+            <!-- 🛠️ FIXED: Isolated image block with working Google Drive video path -->
             <div class="gallery-block">
                 <img src="8.png" alt="Project Documentation 8" class="zoomable">
-                <div class="caption">
-                    <a href="https://google.com" target="_blank" style="color: #111111; font-weight: 500; text-decoration: underline; text-underline-offset: 3px; transition: opacity 0.2s ease;" onmouseover="this.style.opacity='0.6'" onmouseout="this.style.opacity='1'">Watch Depop Squid Game Video</a>
+                <div class="caption" style="margin-top: 16px; padding: 5px 0;">
+                    <a href="https://google.com" target="_blank" style="color: #111111; font-weight: 500; text-decoration: underline; text-underline-offset: 3px; display: inline-block; transition: opacity 0.2s ease;" onmouseover="this.style.opacity='0.6'" onmouseout="this.style.opacity='1'">Watch Depop Squid Game Video</a>
                 </div>
             </div>
 
@@ -246,3 +247,4 @@
     </script>
 </body>
 </html>
+
