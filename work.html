@@ -15,14 +15,14 @@
 
         body {
             font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-            background-color: #ffffff;
+            background-color: #ffffff; 
             color: #333333;
             line-height: 1.6;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
         }
 
-        /* Fixed Top Navigation Dock */
+        /* Fixed Navigation Dock */
         .navbar {
             position: fixed;
             top: 0;
@@ -45,7 +45,7 @@
         .nav-links a {
             text-decoration: none;
             color: #111111;
-            font-weight: 400;
+            font-weight: 400; 
             font-size: 13px;
             text-transform: uppercase;
             letter-spacing: 1.5px;
@@ -63,7 +63,7 @@
         }
 
         .signature {
-            font-weight: 300;
+            font-weight: 300; 
             font-size: 20px;
             letter-spacing: -0.3px;
             color: #111111;
@@ -81,10 +81,12 @@
             opacity: 0.5;
         }
 
+        /* Structural Layout Container */
         main {
             margin-top: 140px;
         }
 
+        /* Core centering container layout rule */
         .container {
             max-width: 800px;
             margin: 0 auto 120px auto;
@@ -93,7 +95,7 @@
 
         .container h1 {
             font-size: 36px;
-            font-weight: 300;
+            font-weight: 300; 
             letter-spacing: -0.5px;
             margin-bottom: 24px;
             color: #111111;
@@ -106,8 +108,9 @@
             margin-bottom: 40px;
         }
 
+        /* Timeline Grid Settings */
         .cv-section {
-            margin-top: 40px;
+            margin-top: 50px;
         }
 
         .cv-section h2 {
@@ -118,13 +121,13 @@
             font-weight: 500;
             border-bottom: 1px solid #f0f0f0;
             padding-bottom: 10px;
-            margin-bottom: 20px;
+            margin-bottom: 24px;
         }
 
         .cv-item {
             display: grid;
             grid-template-columns: 200px 1fr;
-            margin-bottom: 24px;
+            margin-bottom: 30px;
             gap: 20px;
         }
 
@@ -145,7 +148,7 @@
             font-size: 14px;
             font-weight: 400;
             color: #666666;
-            margin-bottom: 8px;
+            margin-bottom: 10px;
         }
 
         .cv-detail ul {
@@ -176,6 +179,7 @@
         }
     </style>
 </head>
+
 <body>
 
     <!-- Fixed Top Navigation Dock -->
@@ -195,10 +199,12 @@
     </nav>
 
     <main>
+        <!-- Everything stays inside this centering container box -->
         <div class="container">
-            <h1>Work</h1>
+            <h1>Work & Background</h1>
             <p>A selection of client engagements, professional positions, and background history.</p>
 
+            <!-- Section 1: Work Experience -->
             <section class="cv-section">
                 <h2>Experience History</h2>
 
@@ -238,16 +244,11 @@
                     </div>
                 </div>
             </section>
-        </div>
-    </main>
-</body>
-</html>
 
-            <!-- Section: Qualifications & Education History -->
+            <!-- Section 2: Qualifications (Perfectly Centered Inside the Box) -->
             <section class="cv-section">
                 <h2>Qualifications</h2>
 
-                <!-- A Levels Item -->
                 <div class="cv-item">
                     <div class="cv-meta">2022 – 2024</div>
                     <div class="cv-detail">
@@ -261,13 +262,12 @@
                     </div>
                 </div>
 
-                <!-- GCSEs Item -->
                 <div class="cv-item">
                     <div class="cv-meta">2017 – 2022</div>
                     <div class="cv-detail">
                         <h3>GCSEs</h3>
                         <ul>
-                            <li>9 GCSEs in total graded A*–C (9–4 equivalent)</li>
+                            <li>9 GCSEs in total graded A–C (9–4 equivalent)</li>
                             <li>English Literature — Grade 7</li>
                             <li>English Language — Grade 5</li>
                             <li>Mathematics — Grade 4</li>
@@ -276,3 +276,10 @@
                 </div>
             </section>
 
+        </div> <!-- Closes the centering container tag securely -->
+    </main>
+
+</body>
+</html>
+
+    
